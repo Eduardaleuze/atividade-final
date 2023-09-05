@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-end de Exemplo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-container">
+    <div class="card" id="login-card">
+      <div class="card-header">
+        <button class="toggle-button" id="login-button">Login</button>
+        <button class="toggle-button" id="signup-button">Criar Conta</button>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title" id="card-title">Cadastro de Usuário</h1>
+        <form id="signup-form" class="form">
+          <input type="text" id="name" class="form-input" placeholder="Nome" required>
+          <input type="email" id="email" class="form-input" placeholder="Email" required>
+          <input type="password" id="password" class="form-input" placeholder="Senha" required>
+          <button type="submit" class="form-button">Cadastrar</button>
+        </form>
+        <form id="login-form" class="form hide">
+          <input type="email" id="login-email" class="form-input" placeholder="Email" required>
+          <input type="password" id="login-password" class="form-input" placeholder="Senha" required>
+          <button type="submit" class="form-button">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div id="recados-container" style="display: none;">
+    <h1>Bem-vindo, <span id="user-status"></span>!</h1>
+    <form id="create-recado-form">
+      <input type="text" class="form-input" id="recado-title" placeholder="Título" required>
+      <textarea id="recado-description" class="form-input" placeholder="Descrição" required></textarea>
+      <button class="form-button" type="submit">Criar Recado</button>
+    </form>
+    <div id="recados-list"></div>
+    <button id="user-logout">Sair</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
